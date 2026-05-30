@@ -12,7 +12,6 @@ function Inner({
 }: {
   query: ServerQuery<ItemData>
 }) {
-  console.log({ queryClientInner: query });
   const { data, key } = useServerQuerySWR(query)
   return (
     <div style={{ display: 'grid', gap: 8 }}>
@@ -44,7 +43,6 @@ export function Client({
 }: {
   query: ServerQuery<ItemData>
 }) {
-  console.log({ queryClient: query });
   return (
     <main
       style={{ padding: 24, fontFamily: 'monospace', display: 'grid', gap: 16 }}

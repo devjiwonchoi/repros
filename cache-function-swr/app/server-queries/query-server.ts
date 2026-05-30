@@ -11,9 +11,7 @@ export type ServerQuery<T> = {
 }
 
 export function queryServer<T>({ loader, params }): ServerQuery<T> {
-  console.log({ paramsServer: params })
   const initialData = loader({ params })
-  console.log({ initialDataServer: initialData })
   return {
     id: getServerReferenceId(loader),
     initialData,
